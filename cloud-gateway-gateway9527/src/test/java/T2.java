@@ -5,6 +5,7 @@ public class T2 {
         ZonedDateTime zonedDateTime = ZonedDateTime.now();
         System.out.println(zonedDateTime);
         System.out.println(zonedDateTime);
+        System.out.println(zonedDateTime + "third test");
 
     }
 
