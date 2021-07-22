@@ -13,6 +13,13 @@ spring:
       discovery:  # 对应eureka中的配置中心，默认不写是找config-server
         service-id: cloud-config-center
         enabled: true # 开启读取配置中心的配置，默认是false
+  # RabbitMQ相关配置， 暴漏BUS刷新配置的断点
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+
 
 eureka:
   client:

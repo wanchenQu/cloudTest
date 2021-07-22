@@ -1,0 +1,32 @@
+server:
+  port: 3366
+
+spring:
+  application:
+    name: config-client
+  cloud:
+    config:
+      discovery:
+        service-id: cloud-config-center
+        enabled: true
+      label: master
+      name: config
+      profile: dev
+      uri: http://config-3344:3344
+  # RabbitMQ相关配置， 暴漏BUS刷新配置的断点
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    service-url:
+      defaultZone: http://localhost:7001/eureka
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"

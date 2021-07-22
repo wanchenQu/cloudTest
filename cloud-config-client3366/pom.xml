@@ -9,9 +9,16 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>cloud-config-client3355</artifactId>
+    <artifactId>cloud-config-client3366</artifactId>
 
     <dependencies>
+
+        <!--添加消息总线RabbitMQ支持-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-bus-amqp</artifactId>
+        </dependency>
+
         <!--eureka server-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
@@ -22,12 +29,6 @@
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-config</artifactId>
-        </dependency>
-
-        <!--添加消息总线RabbitMQ支持-->
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-bus-amqp</artifactId>
         </dependency>
 
         <!--web/actuator这两个一般一起使用，写在一起-->
@@ -61,7 +62,6 @@
         </dependency>
 
     </dependencies>
-
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
