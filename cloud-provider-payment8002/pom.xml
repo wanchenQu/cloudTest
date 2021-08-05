@@ -13,6 +13,12 @@
 
     <dependencies>
 
+        <!-- 包含了sleuth zipkin 数据链路追踪-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-zipkin</artifactId>
+        </dependency>
+
         <!--web/actuator这两个一般一起使用，写在一起-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
