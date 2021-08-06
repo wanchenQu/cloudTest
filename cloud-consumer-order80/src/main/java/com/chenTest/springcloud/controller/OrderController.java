@@ -74,6 +74,7 @@ public class OrderController {
         if (instances == null || instances.size() <= 0) return null;
         ServiceInstance instance = balancer.instance(instances);
         URI uri = instance.getUri();
+        System.out.println(uri);
         return restTemplate.getForObject(uri + "/payment/lb", String.class);
     }
 
