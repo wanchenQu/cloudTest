@@ -1,0 +1,17 @@
+server:
+  port: 9001
+
+spring:
+  application:
+    name: nacos-payment-provider
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+
+# 做监控的话：要把这个全部暴露出来
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"  # 注意是双引号
