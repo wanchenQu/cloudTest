@@ -7,12 +7,14 @@ spring:
   cloud:
     nacos:
       discovery:
-        server-addr: localhost:8848 # Nacos服务注册中心地址
+        #server-addr: localhost:8848 # Nacos服务注册中心地址 192.168.132.129:1111
+        server-addr: 192.168.132.129:1111
       config:
-        server-addr: localhost:8848 # Nacos作为配置中心地址
+        #server-addr: localhost:8848 # Nacos作为配置中心地址
+        server-addr: 192.168.132.129:1111
         file-extension: yaml  # 指定yaml格式的配置
         group: DEV_GROUP
         #namespace: 2348e4d9-8cf6-4eac-8729-e54d8ff03aa3 # test namespace
-        namespace: f7843fb0-cba6-49d8-8c3f-2ff1074712f2 # dev namespace
+        namespace: da9137bc-f9a0-4f00-8b48-a753fafb7e73 # dev namespace
 # ${spring.application.name}-${spring.profile.active}.${spring.cloud.nacos.config.file-extension}
 # nacos-config-client-dev.yaml
