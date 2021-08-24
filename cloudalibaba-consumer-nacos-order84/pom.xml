@@ -9,9 +9,14 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>cloudalibaba-sentinel-service8401</artifactId>
+    <artifactId>cloudalibaba-consumer-nacos-order84</artifactId>
 
     <dependencies>
+        <!--spring cloud alibaba nacos-->
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+        </dependency>
 
         <!--引入我们自定义的公共api jar包-->
         <dependency>
@@ -35,12 +40,6 @@
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-openfeign</artifactId>
-        </dependency>
-
-        <!--spring cloud alibaba nacos-->
-        <dependency>
-            <groupId>com.alibaba.cloud</groupId>
-            <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
         </dependency>
 
         <!--web/actuator这两个一般一起使用，写在一起-->
@@ -74,8 +73,8 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
-
     </dependencies>
+
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
